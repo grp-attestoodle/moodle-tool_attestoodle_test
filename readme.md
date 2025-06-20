@@ -28,15 +28,15 @@ Note : la procédure ci-dessous cible un Moodle virtualisé avec docker.  Elle e
 * celle du [moodle HQ](https://github.com/moodlehq/moodle-docker) ;
 * celle de [Caen](git@git.unicaen.fr:cadiou/moodle-docker.git), si vous y avez accès. 
 
-2. Vérifier la version de Moodle et si besoin la changer. Les données de test ont été faites pour un Moodle en version 2022112814.00, release 4.1.14. 
+2. Vérifier la version de Moodle et si besoin la changer. Les données de test ont été faites pour un Moodle en version 2024100702.02, release 4.5.2+ avec la sauvegarde initdb2.sql.
 
    ```bash
    # depuis le dossier racine de moodle
-   cat version.php # doit inclure $release  = '4.1.14' et $version  = 2022112814.00
-   git checkout v4.1.14 # si nécessaire, ou éventuellement viser le commit d56aa41e9e88d27657baaf4834878f43458e292d
+   cat version.php # doit inclure $release  = '4.5.2+' et $version  = 2024100702.02
+   git checkout 5a8b2597522491e9659c39bf225d035290c8dc18
    cd ..
    ```
-   
+   Remarque : les sauvegardes initdb0.sql et initdb1.sql restent compatibles avec la version 2022112814.00 (release 4.1.14) de Moodle.
 
 3. Installer les plugins additionnels nécessaires. Pour les installer :
 
